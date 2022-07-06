@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.pmberjaya.tvadsmanager.ui.beranda.BerandaFragment">
+
+    <!--
+    <data>
+        <variable
+            name="viewModel"
+            type="com.pmberjaya.tvadsmanager.ui.beranda.BerandaViewModel" />
+    </data>
+    -->
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/beranda_Nested"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/beranda_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/banner_loading_recylerview_Layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/banner_loading"
+                    layout="@layout/loading"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+
+                <include
+                    android:id="@+id/banner_error"
+                    layout="@layout/error"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewpager_beranda"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:orientation="horizontal" />
+
+            </RelativeLayout>
+
+            <TableLayout
+                android:id="@+id/menu_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/banner_loading_recylerview_Layout"
+                android:stretchColumns="*"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TableRow
+                    android:id="@+id/menu_ImageRow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/menu_layananImage"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/ic_baseline_home_24" />
+
+                    <ImageView
+                        android:id="@+id/menu_home_serviceImage"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/ic_baseline_home_24" />
+
+                    <ImageView
+                        android:id="@+id/menu_hasil_labImage"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/ic_baseline_home_24" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/menu_TextRow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/menu_layananText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Layanan"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/menu_home_serviceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Home Service Doctor"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/menu_hasil_labText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Hasil Lab"
+                        android:textAlignment="center" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:id="@+id/edukasi_informasi_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/menu_Layout"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <LinearLayout
+                    android:id="@+id/edukasi_informasi_textLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/edukasi_Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="Edukasi Kesehatan" />
+
+                    <TextView
+                        android:id="@+id/informasi_Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Informasi seputar kesehatan" />
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/detail_edukasi_informasi_imageButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/news_loading_recylerview_Layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edukasi_informasi_Layout">
+
+                <include
+                    android:id="@+id/news_loading"
+                    layout="@layout/loading"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+
+                <include
+                    android:id="@+id/news_error"
+                    layout="@layout/error"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recylerview_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/paket_rekomendasi_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/news_loading_recylerview_Layout"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/paket_rekomendasi_textLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/paket_rekomendasi_Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Paket Pemeriksaan Rekomendasi"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/paket_rekomendasi_descriptionText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hemat lebih banyak dengan paket" />
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/detail_paket_rekomendasi_imageButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+<!--            <include-->
+<!--                android:id="@+id/paket_loading"-->
+<!--                layout="@layout/loading"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_below="@+id/paket_rekomendasi_Layout"-->
+<!--                android:layout_marginTop="72.5dp"-->
+<!--                android:layout_marginBottom="72.5dp" />-->
+
+            <include
+                android:id="@+id/paket_loading"
+                layout="@layout/loading"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/paket_rekomendasi_Layout" />
+
+            <include
+                android:id="@+id/paket_error"
+                layout="@layout/error"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/paket_rekomendasi_Layout"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recylerview_paket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/paket_rekomendasi_Layout"
+                android:layout_marginLeft="20dp" />
+
+            <!--        <androidx.recyclerview.widget.RecyclerView-->
+            <!--            android:id="@+id/recyclerview"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="250dp"-->
+            <!--            android:orientation="vertical" />-->
+
+            <!--        <TextView-->
+            <!--            android:id="@+id/tes"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="match_parent"-->
+            <!--            android:text="tes"-->
+            <!--            tools:text="Test"/>-->
+            <!--        android:text="@{viewModel.response}" //exist inside TextView before-->
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

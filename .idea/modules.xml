@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Pindolab_Trial.iml" filepath="$PROJECT_DIR$/.idea/modules/Pindolab_Trial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Pindolab_Trial.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Pindolab_Trial.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Pindolab_Trial.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Pindolab_Trial.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Pindolab_Trial.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Pindolab_Trial.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Pindolab_Trial.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Pindolab_Trial.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>

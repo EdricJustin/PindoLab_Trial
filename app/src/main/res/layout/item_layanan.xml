@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layanan_kategori_service_cardWrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        app:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:id="@+id/layanan_kategori_service_Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="230dp"
+            android:orientation="vertical">
+            <!-- jika sudah tau bagaimana buat kiri kanannya saling menyesuaikan maka -->
+            <!-- heightnya diganti menjadi wrap content -->
+
+            <ImageView
+                android:id="@+id/layanan_kategori_service_Image"
+                android:layout_width="180dp"
+                android:layout_height="135dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/backgrounds/scenic"/>
+
+            <TextView
+                android:id="@+id/layanan_kategori_service_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                tools:text="Lorem Ipsum dolor sit amet"/>
+            <!-- jika sudah tau bagaimana buat kiri kanannya saling menyesuaikan maka -->
+            <!-- maxLines dan ellipsize nya dihilangkan saja -->
+
+            <TextView
+                android:id="@+id/layanan_kategori_service_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                tools:text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt"/>
+
+            <TextView
+                android:id="@+id/layanan_kategori_service_Price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                tools:text="Rp. x"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+<!--    <TextView-->
+<!--        android:id="@+id/tes"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:textSize="30sp"-->
+<!--        tools:text="Tes"/>-->
+
+</RelativeLayout>

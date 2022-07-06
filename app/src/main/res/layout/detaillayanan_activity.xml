@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--    <TextView-->
+<!--        android:id="@+id/tes_layanan"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:text="Layanan"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="40dp"-->
+<!--        android:gravity="center"/>-->
+
+    <!-- sample -->
+    <include
+        android:id="@+id/toolbar_detailLayanan"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:id="@+id/detail_layanan_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tambahButton"
+        android:layout_below="@+id/toolbar_detailLayanan">
+
+        <RelativeLayout
+            android:id="@+id/detail_layanan_submainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/detail_layananLayout"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="#018ed5">
+
+                <ImageView
+                    android:id="@+id/detail_layananImage"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    tools:src="@tools:sample/backgrounds/scenic" />
+
+                <LinearLayout
+                    android:id="@+id/detail_layanan_name_price_Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/detail_layanan_nameText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        tools:text="Lorem Ipsum dolor sit amet" />
+
+                    <TextView
+                        android:id="@+id/detail_layanan_priceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        tools:text="Rp. x" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- onclick di set pada layoutnya -->
+            <LinearLayout
+                android:id="@+id/detail_layanan_deskripsiLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_layananLayout"
+                android:gravity="center_vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/detail_layanan_deskripsiText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Deskripsi"
+                    android:textColor="#018ed5"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/detail_layanan_deskripsiImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/detail_layanan_deskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_layanan_deskripsiLayout"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:lineSpacingExtra="5sp"
+                android:textColor="@color/black"
+                tools:text="Lorem Ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam volupta." />
+
+            <View
+                android:id="@+id/detail_layanan_deskripsiLine"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/detail_layanan_deskripsi"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#cccccc" />
+
+            <LinearLayout
+                android:id="@+id/detail_layanan_manfaatLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_layanan_deskripsiLine"
+                android:gravity="center_vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/detail_layanan_manfaatText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Manfaat Pemeriksaan"
+                    android:textColor="#018ed5"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/detail_layanan_manfaatImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/detail_layanan_manfaat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_layanan_manfaatLayout"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:lineSpacingExtra="5sp"
+                android:textColor="@color/black"
+                tools:text="Lorem Ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam volupta." />
+
+            <View
+                android:id="@+id/detail_layanan_manfaatLine"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/detail_layanan_manfaat"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#cccccc" />
+
+            <LinearLayout
+                android:id="@+id/detail_layanan_persiapanLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_layanan_manfaatLine"
+                android:gravity="center_vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/detail_layanan_persiapanText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Persiapan Sebelum Pemeriksaan"
+                    android:textColor="#018ed5"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/detail_layanan_persiapanImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/detail_layanan_persiapan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_layanan_persiapanLayout"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:lineSpacingExtra="5sp"
+                android:textColor="@color/black"
+                tools:text="Lorem Ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam volupta." />
+
+            <View
+                android:id="@+id/detail_layanan_persiapanLine"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/detail_layanan_persiapan"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#cccccc" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/tambahButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:drawableLeft="@drawable/ic_baseline_shopping_cart_24"
+        android:paddingLeft="30dp"
+        android:textAllCaps="false"
+        android:text="Tambah ke keranjang"
+        android:background="@drawable/custom_tambah_button"/>
+
+</RelativeLayout>
