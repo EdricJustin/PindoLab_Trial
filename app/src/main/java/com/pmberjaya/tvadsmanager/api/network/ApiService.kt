@@ -31,3 +31,5 @@ interface ApiService {
     @GET("api/packages/{package_id}")
     suspend fun getPaket(@Path("package_id") packageId : String): Response<BaseDataResponse<LayananPaket>>
 }
+
+//note : kotasatelit adalah link alpha untuk testing (kalo untuk link yang live di aplikasi yang sudah di launch beda lagi)
