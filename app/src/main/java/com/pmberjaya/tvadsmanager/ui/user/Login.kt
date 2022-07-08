@@ -1,19 +1,16 @@
 package com.pmberjaya.tvadsmanager.ui.user
 
 import android.os.Bundle
-import android.view.View
-import android.widget.Toast
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import com.pmberjaya.tvadsmanager.R
-import com.pmberjaya.tvadsmanager.api.model.UserData
-import com.pmberjaya.tvadsmanager.cache.model.Status
 import com.pmberjaya.tvadsmanager.cache.sharedpref.PreferencesHelper
 import com.pmberjaya.tvadsmanager.databinding.LoginActivityBinding
-import com.pmberjaya.tvadsmanager.util.Constants
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+
 
 @AndroidEntryPoint
 class Login : AppCompatActivity() {
@@ -27,16 +24,25 @@ class Login : AppCompatActivity() {
         setContentView(R.layout.login_activity)
         initObserver()
         binding = LoginActivityBinding.inflate(layoutInflater)
-        binding.btnLogin.setOnClickListener {
+
+        /*if(binding.passwordEditText.getTransformationMethod().equals(PasswordTransformationMethod.getInstance())){
+            binding.passwordVisibility.setImageResource(R.drawable.ic_baseline_visibility_off_24)
+            binding.passwordEditText.setTransformationMethod(HideReturnsTransformationMethod.getInstance())
+        }else{
+            binding.passwordVisibility.setImageResource(R.drawable.ic_baseline_visibility_24)
+            binding.passwordEditText.setTransformationMethod(PasswordTransformationMethod.getInstance())
+        }*/
+
+        /*binding.btnLogin.setOnClickListener {
             loginViewModel.postLogin("huangedwin123@gmail.com", "test12345")
         }
         if (preferencesHelper.isLogin) {
             loginViewModel.getUserData()
-        }
+        }*/
     }
 
     private fun initObserver() {
-        loginViewModel.loginLiveData.observe(this, Observer {
+        /*loginViewModel.loginLiveData.observe(this, Observer {
             when (it.status) {
                 Status.LOADING -> {
                     binding.pgLogin.visibility = View.VISIBLE
@@ -88,6 +94,7 @@ class Login : AppCompatActivity() {
                     Toast.makeText(this, "401", Toast.LENGTH_SHORT).show()
                 }
             }
-        })
+        })*/
     }
+
 }

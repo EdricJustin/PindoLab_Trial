@@ -1,13 +1,16 @@
 package com.pmberjaya.tvadsmanager.ui
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.pmberjaya.tvadsmanager.R
 import com.pmberjaya.tvadsmanager.databinding.ActivityMainBinding
 import com.pmberjaya.tvadsmanager.ui.beranda.BerandaFragment
+import com.pmberjaya.tvadsmanager.ui.user.Login
 import dagger.hilt.android.AndroidEntryPoint
+
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -18,9 +21,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         switchFragment()
 
-//        startActivity(Intent(this,Login::class.java))
-//        //startActivity(Intent(this,Login::class.java))
-//        finish()
+        binding.bottomToolbar.setOnNavigationItemSelectedListener{
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
+            true
+        }
 
     }
 
