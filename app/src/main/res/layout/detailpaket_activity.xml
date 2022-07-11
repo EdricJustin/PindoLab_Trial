@@ -6,17 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--    <TextView-->
-    <!--        android:id="@+id/tes_paket"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent"-->
-    <!--        android:text="Layanan"-->
-    <!--        android:textColor="@color/black"-->
-    <!--        android:textStyle="bold"-->
-    <!--        android:textSize="40dp"-->
-    <!--        android:gravity="center"/>-->
-
-    <!-- sample -->
     <include
         android:id="@+id/toolbar_detailPaket"
         layout="@layout/toolbar" />
@@ -94,7 +83,6 @@
 
             </LinearLayout>
 
-            <!-- onclick di set pada layoutnya -->
             <LinearLayout
                 android:id="@+id/detail_paket_deskripsiLayout"
                 android:layout_width="match_parent"
@@ -170,18 +158,6 @@
                     android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
 
             </LinearLayout>
-
-<!--            <TextView-->
-<!--                android:id="@+id/detail_paket_pemeriksaan"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_below="@+id/detail_paket_pemeriksaanLayout"-->
-<!--                android:layout_marginLeft="20dp"-->
-<!--                android:layout_marginRight="20dp"-->
-<!--                android:layout_marginBottom="20dp"-->
-<!--                android:lineSpacingExtra="5sp"-->
-<!--                android:textColor="@color/black"-->
-<!--                tools:text="Lorem Ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam volupta." />-->
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recylerview_detail_paket_pemeriksaan"

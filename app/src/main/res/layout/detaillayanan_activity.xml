@@ -6,17 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<!--    <TextView-->
-<!--        android:id="@+id/tes_layanan"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:text="Layanan"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textStyle="bold"-->
-<!--        android:textSize="40dp"-->
-<!--        android:gravity="center"/>-->
-
-    <!-- sample -->
     <include
         android:id="@+id/toolbar_detailLayanan"
         layout="@layout/toolbar" />
@@ -78,7 +67,6 @@
 
             </LinearLayout>
 
-            <!-- onclick di set pada layoutnya -->
             <LinearLayout
                 android:id="@+id/detail_layanan_deskripsiLayout"
                 android:layout_width="match_parent"
