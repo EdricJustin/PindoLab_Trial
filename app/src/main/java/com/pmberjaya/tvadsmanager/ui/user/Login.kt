@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.pmberjaya.tvadsmanager.R
 import com.pmberjaya.tvadsmanager.cache.sharedpref.PreferencesHelper
 import com.pmberjaya.tvadsmanager.databinding.LoginActivityBinding
+import com.pmberjaya.tvadsmanager.util.Utility
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -21,9 +22,12 @@ class Login : AppCompatActivity() {
     lateinit var preferencesHelper: PreferencesHelper
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login_activity)
-        initObserver()
         binding = LoginActivityBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        Utility.initToolbar(this, binding.toolbarLogin, "", null)
+
+        initObserver()
 
         /*if(binding.passwordEditText.getTransformationMethod().equals(PasswordTransformationMethod.getInstance())){
             binding.passwordVisibility.setImageResource(R.drawable.ic_baseline_visibility_off_24)
