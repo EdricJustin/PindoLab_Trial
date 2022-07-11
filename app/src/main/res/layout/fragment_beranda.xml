@@ -5,14 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.pmberjaya.tvadsmanager.ui.beranda.BerandaFragment">
 
-    <!--
-    <data>
-        <variable
-            name="viewModel"
-            type="com.pmberjaya.tvadsmanager.ui.beranda.BerandaViewModel" />
-    </data>
-    -->
-
     <androidx.core.widget.NestedScrollView
         android:id="@+id/beranda_Nested"
         android:layout_width="match_parent"
@@ -229,15 +221,6 @@
 
             </LinearLayout>
 
-<!--            <include-->
-<!--                android:id="@+id/paket_loading"-->
-<!--                layout="@layout/loading"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_below="@+id/paket_rekomendasi_Layout"-->
-<!--                android:layout_marginTop="72.5dp"-->
-<!--                android:layout_marginBottom="72.5dp" />-->
-
             <include
                 android:id="@+id/paket_loading"
                 layout="@layout/loading"
@@ -258,20 +241,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/paket_rekomendasi_Layout"
                 android:layout_marginLeft="20dp" />
-
-            <!--        <androidx.recyclerview.widget.RecyclerView-->
-            <!--            android:id="@+id/recyclerview"-->
-            <!--            android:layout_width="match_parent"-->
-            <!--            android:layout_height="250dp"-->
-            <!--            android:orientation="vertical" />-->
-
-            <!--        <TextView-->
-            <!--            android:id="@+id/tes"-->
-            <!--            android:layout_width="match_parent"-->
-            <!--            android:layout_height="match_parent"-->
-            <!--            android:text="tes"-->
-            <!--            tools:text="Test"/>-->
-            <!--        android:text="@{viewModel.response}" //exist inside TextView before-->
 
         </RelativeLayout>
 

@@ -69,11 +69,4 @@
 
     </androidx.cardview.widget.CardView>
 
-<!--    <TextView-->
-<!--        android:id="@+id/tes"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:textSize="30sp"-->
-<!--        tools:text="Tes"/>-->
-
 </RelativeLayout>
