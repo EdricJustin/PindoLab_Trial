@@ -29,14 +29,6 @@ class Login : AppCompatActivity() {
 
         initObserver()
 
-        /*if(binding.passwordEditText.getTransformationMethod().equals(PasswordTransformationMethod.getInstance())){
-            binding.passwordVisibility.setImageResource(R.drawable.ic_baseline_visibility_off_24)
-            binding.passwordEditText.setTransformationMethod(HideReturnsTransformationMethod.getInstance())
-        }else{
-            binding.passwordVisibility.setImageResource(R.drawable.ic_baseline_visibility_24)
-            binding.passwordEditText.setTransformationMethod(PasswordTransformationMethod.getInstance())
-        }*/
-
         /*binding.btnLogin.setOnClickListener {
             loginViewModel.postLogin("huangedwin123@gmail.com", "test12345")
         }
